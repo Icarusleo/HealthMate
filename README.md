@@ -1,40 +1,76 @@
 # HealthMate 🏥
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Platform](https://img.shields.io/badge/platform-Android%20%2F%20iOS-lightgrey.svg)
-![Flutter](https://img.shields.io/badge/framework-Flutter-02569B?logo=flutter)
-![Firebase](https://img.shields.io/badge/backend-Firebase-FFCA28?logo=firebase)
+![Platform](https://img.shields.io/badge/platform-Android-green.svg)
+![Language](https://img.shields.io/badge/language-Java-orange.svg)
+![Build](https://img.shields.io/badge/build-Gradle-blue.svg)
 
-HealthMate is a comprehensive mobile health assistant designed to help users track their wellness journey, manage medical data, and maintain a healthier lifestyle through an intuitive digital interface.
+HealthMate is a native Android application designed as a personal health companion. It allows users to track their daily wellness, manage medical appointments, and keep a digital record of their vital signs through an intuitive and user-friendly mobile interface.
 
 ## 🌟 Key Features
 
-- **Personal Health Dashboard:** View daily activity, hydration levels, and health metrics at a glance.
-- **Appointment Tracking:** Schedule and manage doctor appointments with automated reminders.
-- **Medication Reminders:** Never miss a dose with customizable pill tracking and notification alerts.
-- **Vital Sign Logs:** Track blood pressure, glucose levels, heart rate, and BMI over time with visual charts.
-- **Secure Data Storage:** Keep your medical history and documents safe with encrypted cloud synchronization.
-- **Healthy Habit Tracking:** Water intake reminders, step counters, and sleep quality logging.
+- **Personal Health Dashboard:** Real-time tracking of health metrics and daily goals.
+- **Medical Appointments:** A dedicated system to schedule, view, and manage doctor visits.
+- **Vitals Tracking:** Log and monitor blood pressure, heart rate, and other essential health data.
+- **Profile Management:** Securely store and update personal health information and medical history.
+- **Local Persistence:** Reliable data management using modern Android storage practices.
 
 ## 🛠️ Technology Stack
 
-- **Framework:** [Flutter](https://flutter.dev/) (Cross-platform Mobile Development)
-- **State Management:** Provider / Riverpod / Bloc (Choose the one used in your project)
-- **Backend/Database:** [Firebase](https://firebase.google.com/) (Firestore & Authentication)
-- **Local Storage:** Shared Preferences / SQFlite
-- **UI Components:** Material Design / Cupertino Icons
+- **Language:** [Java](https://www.java.com/) (Native Android Development)
+- **Minimum SDK:** API 21+ (Android 5.0 Lollipop)
+- **UI Design:** XML Layouts with Material Design components.
+- **Database:** SQLite / Room Persistence Library (if applicable for local data).
+- **Build System:** Gradle.
+- **IDE:** Android Studio.
+
+
+## ⚙️ Installation & Setup
+Prerequisites
+- Android Studio (Ladybug or newer recommended).
+
+- Java Development Kit (JDK) 11 or 17.
+
+- An Android Emulator or a physical Android device.
+
+Steps
+- Clone the repository:
+
+- Bash
+- git clone [https://github.com/mobilodevi2025-healthmate/HealthMate.git](https://github.com/mobilodevi2025-healthmate/HealthMate.git)
+- Open the Project:
+
+- Launch Android Studio.
+
+- Select "Open an Existing Project".
+
+- Navigate to the cloned folder and select the HealthMate directory.
+
+- Sync Gradle:
+
+- Wait for Android Studio to finish the Gradle sync process and download necessary dependencies.
+
+- Run the App:
+
+- Click the "Run" button (green play icon) in the toolbar to build and install the app on your device/emulator.
+## 📸 Screenshots
+  - <img width="1066" height="1956" alt="image" src="https://github.com/user-attachments/assets/dfc4263b-211b-4004-b4fc-a92009a8397a" />
+  - <img width="1034" height="2048" alt="image" src="https://github.com/user-attachments/assets/9e98f954-03de-45f9-b1e5-7446adcf891f" />
+  - <img width="1039" height="2030" alt="image" src="https://github.com/user-attachments/assets/84a6507a-342f-4056-ac66-7ed2ef49a975" />
+  
+
+
 
 ## 📂 Project Structure
 
 ```text
 HealthMate/
-├── android/              # Android specific configurations
-├── ios/                  # iOS specific configurations
-├── lib/                  # Main application source code
-│   ├── models/           # Data models (User, HealthData, Appointment)
-│   ├── screens/          # UI Screens (Home, Login, Profile, VitalLogs)
-│   ├── services/         # API and Firebase integration logic
-│   ├── widgets/          # Reusable UI components
-│   └── main.dart         # Entry point of the application
-├── assets/               # Images, fonts, and local icons
-└── pubspec.yaml          # Project dependencies and assets
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/healthmate/     # Java source files (Activities, Adapters, Models)
+│   │   │   ├── res/                     # Resources (Layouts XML, Drawables, Values)
+│   │   │   └── AndroidManifest.xml      # App configuration and permissions
+│   └── build.gradle                     # Module-level build configuration
+├── gradle/                              # Gradle wrapper files
+└── build.gradle                         # Project-level build configuration
